@@ -1,0 +1,2 @@
+# local-competition
+git repository
