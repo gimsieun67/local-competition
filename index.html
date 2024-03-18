@@ -14,7 +14,7 @@
 <body>
     <header>
         <div class="maindiv flex containerr">
-            <img src="././images/lBaseball-removebg-preview.png" alt="">
+            <img src="./images/baseballlogo.png" alt="">
             <nav class="flex">
                 <ul class="maintext flex">
                     <li><a href="#">information</a></li>
@@ -125,8 +125,7 @@
             </div>
         </div>
         <div class="modal">
-            <input type="checkbox" id="pop" hidden 
-            <label for="pop"></label>
+            <input type="checkbox" id="pop" hidden <label for="pop"></label>
             <div class="dialog">
                 <div class="modalText">
                     <h2>아직 게임이 없습니다.</h2>
@@ -134,9 +133,11 @@
                 </div>
             </div>
         </div>
-        <input type="checkbox" id="night">
-        <input type="checkbox" id="weekend">
-        <input type="checkbox" id="dawn">
+        <input type="radio" id="night" name="leage" hidden>
+        <input type="radio" id="weekend" name="leage" hidden>
+        <input type="radio" id="dawn" name="leage" hidden>
+        <input type="radio" id="hitter" name="player" hidden>
+        <input type="radio" id="pitcher" name="player" hidden>
         <div class="baseball flex">
             <div class="ranking">
                 <label for="night">
@@ -144,7 +145,9 @@
                 </label>
                 <div class="baseballplayer flex">
                     <div class="pitcher">
-                        <h3><a href="#">투수순위</a></h3>
+                        <label for="pitcher">
+                            <h3>투수순위</h3>
+                        </label>
                         <li>1. 나일투 </li>
                         <li>2. 나이투 </li>
                         <li>3. 나삼투</li>
@@ -154,7 +157,9 @@
                         <li>7. 나칠투 </li>
                     </div>
                     <div class="hitter">
-                        <h3><a href="#">타자순위</a></h3>
+                        <label for="hitter">
+                            <h3>타자순위</h3>
+                        </label>
                         <li> 1. 나일타</li>
                         <li> 2. 나이타</li>
                         <li> 3. 나삼타</li>
@@ -171,7 +176,9 @@
                 </label>
                 <div class="baseballplayer flex">
                     <div class="pitcher">
-                        <h3><a href="#">투수순위</a></h3>
+                        <label for="pitcher">
+                            <h3>투수순위</h3>
+                        </label>
                         <li>1. 나일투 </li>
                         <li>2. 나이투 </li>
                         <li>3. 나삼투</li>
@@ -181,7 +188,9 @@
                         <li>7. 나칠투 </li>
                     </div>
                     <div class="hitter">
-                        <h3><a href="#">타자순위</a></h3>
+                        <label for="hitter">
+                            <h3>타자순위</h3>
+                        </label>
                         <li> 1. 나일타</li>
                         <li> 2. 나이타</li>
                         <li> 3. 나삼타</li>
@@ -198,7 +207,9 @@
                 </label>
                 <div class="baseballplayer flex">
                     <div class="pitcher">
-                        <h3><a href="#">투수순위</a></h3>
+                        <label for="pitcher">
+                            <h3>투수순위</h3>
+                        </label>
                         <li>1. 나일투 </li>
                         <li>2. 나이투 </li>
                         <li>3. 나삼투</li>
@@ -208,7 +219,9 @@
                         <li>7. 나칠투 </li>
                     </div>
                     <div class="hitter">
-                        <h3><a href="#">타자순위</a></h3>
+                        <label for="hitter">
+                            <h3>타자순위</h3>
+                        </label>
                         <li> 1. 나일타</li>
                         <li> 2. 나이타</li>
                         <li> 3. 나삼타</li>
@@ -219,6 +232,68 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <input type="radio" id="top1" name="top" hidden>
+        <input type="radio" id="top2" name="top" hidden>
+        <input type="radio" id="top3" name="top" hidden>
+        <input type="radio" id="top4" name="top" hidden>
+        <input type="radio" id="top5" name="top" hidden>
+        <input type="radio" id="top6" name="top" hidden>
+        <div class="top">
+            <ul>
+                <h1 style="color: #E3242B; border-bottom: solid 3px black;" >주요 부문 Top5</h1>
+                <label for="top1">타율:</label>
+                <ul class="submenu">
+                    <li><a href="#">(1위)일타율</a></li>
+                    <li><a href="#">(2위)이타율</a></li>
+                    <li><a href="#">(3위)삼타율</a></li>
+                    <li><a href="#">(4위)사타율</a></li>
+                    <li><a href="#">(5위)오타율</a></li>
+                </ul>
+                <label for="top2">홈런:</label>
+                <ul class="submenu">
+                    <li><a href="#">(1위)일홈런</a></li>
+                    <li><a href="#">(2위)이홈런</a></li>
+                    <li><a href="#">(3위)삼홈런</a></li>
+                    <li><a href="#">(4위)사홈런</a></li>
+                    <li><a href="#">(5위)오홈런</a></li>
+                </ul>
+                <label for="top3">다승:</label>
+                <ul class="submenu">
+                    <li><a href="#">(1위)일다승</a></li>
+                    <li><a href="#">(2위)이다승</a></li>
+                    <li><a href="#">(3위)삼다승</a></li>
+                    <li><a href="#">(4위)사다승</a></li>
+                    <li><a href="#">(5위)오다승</a></li>
+                </ul>
+                <label for="top4">평균자책</label>
+                <ul class="submenu">
+                    <li><a href="#">(1위)일평자</a></li>
+                    <li><a href="#">(2위)이평자</a></li>
+                    <li><a href="#">(3위)삼평자</a></li>
+                    <li><a href="#">(4위)사평자</a></li>
+                    <li><a href="#">(5위)오평자</a></li>
+                </ul>
+                <label for="top5">탈삼진</label>
+                <ul class="submenu">
+                    <li><a href="#">(1위)일삼진</a></li>
+                    <li><a href="#">(2위)이삼진</a></li>
+                    <li><a href="#">(3위)삼삼진</a></li>
+                    <li><a href="#">(4위)사삼진</a></li>
+                    <li><a href="#">(5위)오삼진</a></li>
+                </ul>
+                <label for="top6">세이브</label>
+                <ul class="submenu">
+                    <li><a href="#">(1위)일세이</a></li>
+                    <li><a href="#">(2위)이세이</a></li>
+                    <li><a href="#">(3위)삼세이</a></li>
+                    <li><a href="#">(4위)사세이</a></li>
+                    <li><a href="#">(5위)오세이</a></li>
+                </ul>
+            </ul>
+        </div>
+    </div>
 </body>
 <script src="./script/script.js"></script>
+
 </html>

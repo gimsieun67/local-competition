@@ -233,36 +233,119 @@ body {
 .team > p {
      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+.baseball {
+    margin-top: 20px;
+}
 .baseballplayer {
     width: 500px;
+    height: 100px;
     text-align: center;
-    gap: 50px;
+    gap: 20px;
+}
+.ranking {
+    width: 440px;
+    height: 255px;;
+    border: solid 4px #FDF5E6;
+    padding-left: 120px;
 }
 .ranking > label {
+    width: 180px;
+    text-align: center;
+    background-color: aquamarine;
     display: block;
     margin-bottom: 20px;
+    border: solid 1px black;
 }
 .pitcher, .hitter {
     margin-right: 20px;
 }
-#night:checked ~ .pitcher {
+.hitter {
     display: none;
 }
-#night:checked ~ .baseball .ranking:nth-child(2) .hitter {
+.hitter > li {
     display: none;
 }
-#night:checked ~ .baseball .ranking:nth-child(3) .hitter {
+
+.pitcher{
     display: none;
 }
-#night:checked ~ .baseball .ranking:nth-child(2) .pitcher {
+.pitcher > li {
+    display: none;
+    transition: 0.5s;
+}
+#night:checked ~ .baseball .ranking:nth-child(1) .hitter {
+    display: block;
+}
+#night:checked ~ .baseball .ranking:nth-child(1) .pitcher{
+    display: block;
+}
+#night:checked ~.baseball .ranking:nth-child(2) .pitcher, .hitter {
     display: none;
 }
-#night:checked ~ .baseball .ranking:nth-child(3) .pitcher {
-    display: none;
+#weekend:checked ~ .baseball .ranking:nth-child(2) .pitcher{
+    display: block;
 }
-#night:checked ~ .baseball .ranking:nth-child(1)  .pitcher > li {
-    display: none;
+#weekend:checked ~ .baseball .ranking:nth-child(2) .hitter{
+    display: block;
 }
-#night:checked ~ .baseball .ranking:nth-child(1)  .hitter > li {
+#dawn:checked ~ .baseball .ranking:nth-child(3) .hitter{
+    display: block;
+}
+#dawn:checked ~ .baseball .ranking:nth-child(3) .pitcher{
+    display: block;
+}
+#pitcher:checked ~ .baseball .ranking  .pitcher li {
+    display: block;
+  }
+  #pitcher:checked ~ .baseball .ranking .hitter li {
     display: none;
+  }
+#hitter:checked ~ .baseball .ranking .hitter li {
+    display: block;
+  }
+  #hitter:checked ~ .baseball .ranking .pitcher li {
+    display: none;
+}    
+.submenu {
+    overflow: hidden;
+    height: 0;
+}
+label  {
+    line-height: 40px;
+}
+.top {
+    margin-top: 30px;
+}
+#top1:checked ~ .top .submenu:nth-of-type(1) {
+    height: 110px;
+    transition: 0.5s;
+} 
+#top2:checked ~ .top .submenu:nth-of-type(2) {
+    height: 110px;
+    transition: 0.5s;
+} 
+#top3:checked ~ .top .submenu:nth-of-type(3) {
+    height: 110px;
+    transition: 0.5s;
+} 
+#top4:checked ~ .top .submenu:nth-of-type(4) {
+    height: 110px;
+    transition: 0.5s;
+} 
+#top5:checked ~ .top .submenu:nth-of-type(5) {
+    height: 110px;
+    transition: 0.5s;
+} 
+#top6:checked ~ .top .submenu:nth-of-type(6) {
+    height: 110px;
+    transition: 0.5s;
+} 
+.top > ul > label {
+    font-size: 22px;
+    font-weight: 900;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.submenu > li {
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
