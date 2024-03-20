@@ -358,3 +358,20 @@ label  {
     height: 30px;
     font-size: 18px;
 }
+.gallery > div {
+    justify-content: space-between;
+}
+.galleryslide {
+    width: 100%;
+    overflow: hidden;
+}
+.next:checked  ~ .gallery .galleryslide {
+    animation: galleryslide 10s infinite;
+}
+@keyframes galleryslide {
+     
+
+
+
+
+}
