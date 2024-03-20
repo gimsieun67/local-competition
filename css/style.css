@@ -349,3 +349,12 @@ label  {
     font-size: 20px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+.galleryslide > li > img {
+    width: 250px;
+    height: 350px;
+}
+.gallery > div > button {
+    width: 100px;
+    height: 30px;
+    font-size: 18px;
+}
