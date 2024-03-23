@@ -369,9 +369,7 @@ label  {
     animation: galleryslide 10s infinite;
 }
 @keyframes galleryslide {
-     
-
-
-
-
+    0%{transform: translateX(0);}
+    20%{transform: translateX(20);}
+    50%{transform: translateX(40);}  
 }
