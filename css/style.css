@@ -601,3 +601,40 @@ section.container .title {
 .img {
     background-size: cover;
 }
+.gap-5 {gap: 5rem;}
+.modal {color: white; background-color: red;}
+.backdrop {position: fixed; inset: 0; background-color: rgba(0, 0, 0, 0.683); transform: translate(100%); opacity: 0; transition: opacity 0.25s;}
+#modal:checked ~ .backdrop {transform: translate(0); opacity: 1;}
+
+.data > div {display: none;}
+
+#league1:checked ~ #pos1:checked ~ .itemContainer [data-leauge="league1"][data-pos="pos1"] {display: block;}
+#league1:checked ~ #pos2:checked ~ .itemContainer [data-leauge="league1"][data-pos="pos2"] {display: block;}
+
+#league2:checked ~ #pos1:checked ~ .itemContainer [data-leauge="league2"][data-pos="pos1"] {display: block;}
+#league2:checked ~ #pos2:checked ~ .itemContainer [data-leauge="league2"][data-pos="pos2"] {display: block;}
+
+#league3:checked ~ #pos1:checked ~ .itemContainer [data-leauge="league3"][data-pos="pos1"] {display: block;}
+#league3:checked ~ #pos2:checked ~ .itemContainer [data-leauge="league3"][data-pos="pos2"] {display: block;}
+
+
+.easy .item { overflow: hidden; display: grid; grid-template-columns: repeat(3, 1fr); width: 400px; aspect-ratio: 1/1; border: 1px solid red; position: relative;}
+.easy .item > div:nth-child(1):hover ~ .bg { background-position: -75px -75px;}
+.easy .item > div:nth-child(2):hover ~ .bg { background-position: 0px -75px;}
+.easy .item > div:nth-child(3):hover ~ .bg { background-position: 75px -75px;}
+.easy .item > div:nth-child(4):hover ~ .bg { background-position: -75px 0;}
+.easy .item > div:nth-child(5):hover ~ .bg { background-position: 0px 0;}
+.easy .item > div:nth-child(6):hover ~ .bg { background-position: 75px 0;}
+.easy .item > div:nth-child(7):hover ~ .bg { background-position: -75px 75px;}
+.easy .item > div:nth-child(8):hover ~ .bg { background-position: 0px 75px;}
+.easy .item > div:nth-child(9):hover ~ .bg { background-position: 75px 75px;}
+.easy .item .bg { position: absolute; inset: 0; z-index: -1;  background: url('../images/37.jpg')  no-repeat center / cover; scale: 2; transition: all .25s;background-size: cover; }
+.remain > div {
+ width: 300px;
+ height: 400px;
+ background-position: center;
+}
+.remain {
+    position: absolute;
+    right: 311px;
+}
