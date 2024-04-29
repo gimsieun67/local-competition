@@ -1,0 +1,161 @@
+.visual1 .slider{ animation: slider1 10s infinite;}
+.visual2 .slider{ animation: slider2 10s infinite;}
+.match{transition: .5s;}
+.match:hover .vs1{animation: updown .8s;}
+.match:hover .vs2{animation: updown .8s .25s;}
+.match:hover{box-shadow: 1px 1px 10px rgba(0,0,0,.4);}
+#date > li > ul{position: relative;}
+#date > li > ul::after{content: ''; position: absolute; bottom: 50%;right: 0; height: 90%; width: 1px; background-color: rgba(0,0,0,0.1); transform: translateY(50%);}
+#date > li > ul > li{position: relative;}
+#date > li > ul > li.event{border-radius: 100px; background-color: #ffd325; color: white; margin: 10px;}
+#date > li > ul > li::before{content: ''; position: absolute; left: 50%; bottom: -1px; transform: translateX(-50%); width: 50%; height: 1px; background-color: rgba(0,0,0,.1);}
+.modal:has(#modal:checked){display: flex;}
+
+/* 준건 */
+/* #나이트리그:checked ~ .content [for="나이트리그"] {color:black; border-bottom: 3px solid #ffd325}
+#주말리그:checked ~ .content [for="주말리그"] {color:black; border-bottom: 3px solid #ffd325}
+#새벽리그:checked ~ .content [for="새벽리그"] {color:black; border-bottom: 3px solid #ffd325}
+#타자:checked ~ .content [for="타자"] {color:black; border-bottom: 3px solid #ffd325}
+#투수:checked ~ .content [for="투수"] {color:black; border-bottom: 3px solid #ffd325}
+
+
+#나이트리그:checked ~ #타자:checked ~ .content .나타 { display: block ;}
+#나이트리그:checked ~ #투수:checked ~ .content .나투 { display: block ;}
+
+#주말리그:checked ~ #타자:checked ~ .content .주타 { display: block ;}
+#주말리그:checked ~ #투수:checked ~ .content .주투 { display: block ;}
+
+#새벽리그:checked ~ #타자:checked ~ .content .새타 { display: block ;}
+#새벽리그:checked ~ #투수:checked ~ .content .새투 { display: block ;} */
+/* 준건 끝 */
+
+:root{--league: 'default'; --position: 'default'}
+:root:has(#league1:checked) {--league: '나'}
+:root:has(#league2:checked) {--league: '주'}
+:root:has(#league3:checked) {--league: '새'}
+:root:has(#position1:checked) {--position: '타'}
+:root:has(#position2:checked) {--position: '투'}
+
+.ranking .btns label {color: rgba(0,0,0,.5)}
+.ranking .btns label:hover{color: black}
+.ranking .btns input:checked + label{ color:black; border-bottom: 3px solid #ffd325}
+.ranking .player li:nth-of-type(1)::before{ content: var(--league)'일'var(--position)}
+.ranking .player li:nth-of-type(2)::before{ content: var(--league)'이'var(--position)}
+.ranking .player li:nth-of-type(3)::before{ content: var(--league)'삼'var(--position)}
+.ranking .player li:nth-of-type(4)::before{ content: var(--league)'사'var(--position)}
+.ranking .player li:nth-of-type(5)::before{ content: var(--league)'오'var(--position)}
+.ranking .player li:nth-of-type(6)::before{ content: var(--league)'육'var(--position)}
+.ranking .player li:nth-of-type(7)::before{ content: var(--league)'칠'var(--position)}
+
+.top li{ overflow: hidden; display: grid; grid-template-rows: repeat(2, 30px); transition: 0.2s; height: 30px;}
+.top li:has(:checked) {height: 60px;}
+
+.gallery .btns div{display: none; animation: gallery .5s;}
+.gallery .btns input:checked+div{display: flex;}
+
+.gallery .slider{transition: 0.5s;}
+.gallery:has(#gall2:checked) .slider {transform: translateX(calc((-1320px / 5) * 1));}
+.gallery:has(#gall3:checked) .slider {transform: translateX(calc((-1320px / 5) * 2));}
+.gallery:has(#gall4:checked) .slider {transform: translateX(calc((-1320px / 5) * 3));}
+.gallery .slider li .cover{opacity: 0; transition: 0.3s;}
+.gallery .slider li:hover .cover{opacity: 1;}
+
+.goods .img:nth-of-type(1){ background-size: 110%; transition: .5s;}
+.goods .img:has(.goods1:hover){background-position: 0% -50%;}
+.goods .img:has(.goods2:hover){background-position: 50% -50%;}
+.goods .img:has(.goods3:hover){background-position: 100% -50%;}
+.goods .img:has(.goods4:hover){background-position: 0% 50%;}
+.goods .img:has(.goods5:hover){background-position: 50% 50%;}
+.goods .img:has(.goods6:hover){background-position: 100% 50%;}
+.goods .img:has(.goods7:hover){background-position: 0% 100%;}
+.goods .img:has(.goods8:hover){background-position: 50% 100%;}
+.goods .img:has(.goods9:hover){background-position: 100% 100%;}
+@keyframes slider1 {
+  0% {
+    transform: translateY(0);
+  }
+
+  20% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(-600px);
+  }
+
+  45% {
+    transform: translateY(-600px);
+  }
+
+  50% {
+    transform: translateY(-1200px);
+  }
+
+  70% {
+    transform: translateY(-1200px);
+  }
+
+  75% {
+    transform: translateY(-1800px);
+  }
+
+  95% {
+    transform: translateY(-1800px);
+  }
+
+  100% {
+    transform: translateY(-2400px);
+  }
+}
+@keyframes slider2 {
+  0% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(calc(-100% / 5));
+  }
+
+  45% {
+    transform: translateX(calc(-100% / 5));
+  }
+
+  50% {
+    transform: translateX(calc((-100% / 5) * 2));
+  }
+
+  70% {
+    transform: translateX(calc((-100% / 5) * 2));
+  }
+
+  75% {
+    transform: translateX(calc((-100% / 5) * 3));
+  }
+
+  95% {
+    transform: translateX(calc((-100% / 5) * 3));
+  }
+
+  100% {
+    transform: translateX(calc((-100% / 5) * 4));
+  }
+}
+@keyframes updown {
+  0%{transform: translateY(0%);}
+  30%{transform: translateY(-20%);}
+  100%{transform: translateY(0%);}
+}
+@keyframes gallery {
+  0%{
+    pointer-events: none;
+    filter: brightness(0.8);
+  }
+  100%{
+    pointer-events: none;
+    filter: brightness(0.8);
+  }
+}
